@@ -11,6 +11,8 @@ import CoreText
 
 // MARK: - Enum Define
 
+public typealias TextAction = (_ containerView:UIView, _ text:NSAttributedString, _ range:NSRange , _ rect:CGRect )->Void
+
 /// The attribute type
 @objc public enum TextAttributeType : Int {
     case none = 0
