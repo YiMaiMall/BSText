@@ -11,11 +11,13 @@ let package = Package(
             name: "BSText",
             targets: ["BSText"]),
     ],
-    dependencies: [],
+    dependencies: [
+      //  .package(url: "https://github.com/khalideali/YYImage.git", from: "branch-master")
+    ],
     targets: [
         .target(
             name: "BSText",
-            dependencies: [YYImage],
+            dependencies: [],
             path: "BSText"),
     ],
     swiftLanguageVersions: [.v5]
