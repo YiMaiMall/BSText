@@ -100,6 +100,11 @@ public class TextAsyncLayer: CALayer {
     
     private func _displayAsync(_ async: Bool) -> Void {
         
+        if (self.bounds.size.width<=0 || self.bounds.size.height<=0) {
+            self.contents = nil;
+            return;
+        }
+        
         weak var tmpdelegate = self.delegate as? TextAsyncLayerDelegate
         let task: TextAsyncLayerDisplayTask? = tmpdelegate?.newAsyncDisplayTask()
         if task?.display == nil {
