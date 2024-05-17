@@ -146,7 +146,7 @@ class BSTextAttributeExample: UIViewController {
             
             /// 2. or you can use the convenience method
             one.bs_set(textHighlightRange: one.bs_rangeOfAll, color: UIColor(red: 0.093, green: 0.492, blue: 1.000, alpha: 1.000), backgroundColor: UIColor(white: 0.000, alpha: 0.220), tapAction: { containerView, text, range, rect in
-                _self?.showMessage("Tap: \((text?.string as NSString?)?.substring(with: range) ?? "")")
+                _self?.showMessage("Tap: \((text.string as NSString?)?.substring(with: range) ?? "")")
             })
             
             text.append(one)
@@ -175,7 +175,7 @@ class BSTextAttributeExample: UIViewController {
             highlight.color = UIColor.white
             highlight.backgroundBorder = highlightBorder
             highlight.tapAction = { containerView, text, range, rect in
-                _self?.showMessage("Tap: \((text?.string as NSString?)?.substring(with: range) ?? "")")
+                _self?.showMessage("Tap: \((text.string as NSString?)?.substring(with: range) ?? "")")
             }
             one.bs_set(textHighlight: highlight, range: one.bs_rangeOfAll)
             
@@ -237,7 +237,7 @@ class BSTextAttributeExample: UIViewController {
          all tap action in this label.
          */
         label.highlightTapAction = { containerView, text, range, rect in
-            _self?.showMessage("Tap: \((text?.string as NSString?)?.substring(with: range) ?? "")")
+            _self?.showMessage("Tap: \((text.string as NSString?)?.substring(with: range) ?? "")")
         }
     }
     

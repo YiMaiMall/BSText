@@ -1144,7 +1144,9 @@ open class BSTextView: UIScrollView, UITextInput, UITextInputTraits, UIScrollVie
             container.size = bounds.size
             container.truncationType = TextTruncationType.end
             container.truncationToken = nil
-            let layout = TextLayout(container: container, text: placeholderAttributedText)!
+            guard let layout = TextLayout(container: container, text: placeholderAttributedText) else{
+                return
+            }
             let size: CGSize = layout.textBoundingSize
             let needDraw: Bool = size.width > 1 && size.height > 1
             if needDraw {
